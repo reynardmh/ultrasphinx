@@ -89,6 +89,14 @@ module Ultrasphinx
             end), 
             false)
         end          
+        
+        # Group by
+        if opts['group_by']
+          request.group_by = opts['group_by']
+          request.group_function = opts['group_function'] if opts['group_function']
+          request.group_clause   = opts['group_clause'] if opts['group_clause']
+          request.group_distinct = opts['group_distinct'] if opts['group_distinct']
+        end
 
         # Extract raw filters 
         # XXX This is poorly done. We should coerce based on the Field types, not the value class.

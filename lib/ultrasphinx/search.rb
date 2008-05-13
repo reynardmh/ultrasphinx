@@ -132,6 +132,10 @@ Note that your database is never changed by anything Ultrasphinx does.
       :per_page => 20,
       :sort_by => nil,
       :sort_mode => 'relevance',
+      :group_by => nil,
+      :group_function => nil,
+      :group_clause => nil,
+      :group_distinct => nil,
       :indexes => [
           MAIN_INDEX, 
           (DELTA_INDEX if Ultrasphinx.delta_index_present?)
